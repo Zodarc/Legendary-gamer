@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegendaryTV - Gaming Video Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="stars"></div>
+        <div class="matrix-grid"></div>
+        <div class="glow-orbs"></div>
+    </div>
+
+    <!-- Glowing Border -->
+    <div class="disco-border"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">LEGENDARY</span>
+                <span class="logo-accent">GAMER</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="games.html" class="nav-link">Games</a></li>
+                <li><a href="tips.html" class="nav-link">Tips & Courses</a></li>
+                <li><a href="legendarytv.html" class="nav-link active">LegendaryTV</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="tv-hero">
+        <div class="container">
+            <h1 class="section-title">LegendaryTV</h1>
+            <p class="hero-subtitle">Epic gaming content, reviews, and shoppable videos</p>
+            
+            <!-- Video Categories -->
+            <div class="video-categories">
+                <button class="video-category-btn active" data-category="all">🎬 All Videos</button>
+                <button class="video-category-btn" data-category="reviews">⭐ Gear Reviews</button>
+                <button class="video-category-btn" data-category="setups">🖥️ Setup Tours</button>
+                <button class="video-category-btn" data-category="gameplay">🎮 Gaming Highlights</button>
+                <button class="video-category-btn" data-category="tutorials">📚 Pro Tips</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Video -->
+    <section class="featured-video">
+        <div class="container">
+            <div class="featured-video-content">
+                <div class="video-player">
+                    <div class="video-placeholder">
+                        <div class="play-button" onclick="playFeaturedVideo()">▶️</div>
+                        <div class="video-title-overlay">Ultimate Gaming Setup Tour 2024 - $50K+ Setup</div>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <h2>Ultimate Gaming Setup Tour 2024</h2>
+                    <div class="video-stats">
+                        <span>👁️ 2.5M views</span>
+                        <span>👍 150K likes</span>
+                        <span>📅 2 days ago</span>
+                    </div>
+                    <p class="video-description">
+                        Take an exclusive tour of the most insane gaming setup of 2024. From custom water cooling to RGB everything, this setup cost over $50,000 and we'll show you every component and where to get it.
+                    </p>
+                    <div class="shoppable-items">
+                        <h4>🛒 Featured Products in This Video:</h4>
+                        <div class="shop-tags">
+                            <a href="shop.html?search=monitor" class="shop-tag">4K Gaming Monitor - $899</a>
+                            <a href="shop.html?search=chair" class="shop-tag">Gaming Chair - $549</a>
+                            <a href="shop.html?search=keyboard" class="shop-tag">Mechanical Keyboard - $199</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Grid -->
+    <section class="videos-section">
+        <div class="container">
+            <h2 class="section-title">Latest Videos</h2>
+            
+            <div class="videos-grid" id="videos-grid">
+                <!-- Videos will be dynamically generated -->
+            </div>
+            
+            <div class="load-more-videos">
+                <button class="load-more-btn" id="load-more-videos">Load More Videos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section class="subscribe-section">
+        <div class="container">
+            <div class="subscribe-content">
+                <h2>Never Miss Epic Content</h2>
+                <p>Subscribe to LegendaryTV for the latest gaming reviews, setup tours, and exclusive content</p>
+                
+                <div class="subscribe-buttons">
+                    <a href="#" class="subscribe-btn youtube">
+                        📺 Subscribe on YouTube
+                        <span class="subscriber-count">250K+ Subscribers</span>
+                    </a>
+                    
+                    <a href="#" class="subscribe-btn twitch">
+                        🎮 Follow on Twitch
+                        <span class="subscriber-count">Live Daily</span>
+                    </a>
+                    
+                    <a href="#" class="subscribe-btn tiktok">
+                        🎵 Follow on TikTok
+                        <span class="subscriber-count">500K+ Followers</span>
+                    </a>
+                </div>
+                
+                <div class="notification-signup">
+                    <h3>Get Video Notifications</h3>
+                    <form class="notification-form">
+                        <input type="email" placeholder="Enter your email for video alerts" required>
+                        <button type="submit">Get Notified</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text">LEGENDARY</span>
+                        <span class="logo-accent">GAMER</span>
+                    </div>
+                    <p class="footer-tagline">Your Loadout, Your Legacy</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📺</a>
+                        <a href="#" class="social-link">🎵</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Video Categories</h4>
+                    <ul>
+                        <li><a href="#" onclick="filterVideos('reviews')">Gear Reviews</a></li>
+                        <li><a href="#" onclick="filterVideos('setups')">Setup Tours</a></li>
+                        <li><a href="#" onclick="filterVideos('gameplay')">Gaming Highlights</a></li>
+                        <li><a href="#" onclick="filterVideos('tutorials')">Pro Tips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Platforms</h4>
+                    <ul>
+                        <li><a href="#">YouTube Channel</a></li>
+                        <li><a href="#">Twitch Stream</a></li>
+                        <li><a href="#">TikTok</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Content</h4>
+                    <ul>
+                        <li><a href="#">Latest Reviews</a></li>
+                        <li><a href="#">Setup Guides</a></li>
+                        <li><a href="#">Gaming News</a></li>
+                        <li><a href="#">Live Streams</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="disclaimer">
+                    ⚠️ Disclaimer: This site uses affiliate links. As an Amazon Associate and participant in other affiliate programs, we may earn commissions from qualifying purchases. This helps keep our content free and epic.
+                </p>
+                <p class="copyright">© 2024 Legendary Gamer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/tv.js"></script>
+</body>
+</html>

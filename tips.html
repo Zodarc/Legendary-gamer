@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Tips & Courses - Legendary Gamer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="stars"></div>
+        <div class="matrix-grid"></div>
+        <div class="glow-orbs"></div>
+    </div>
+
+    <!-- Glowing Border -->
+    <div class="disco-border"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">LEGENDARY</span>
+                <span class="logo-accent">GAMER</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="games.html" class="nav-link">Games</a></li>
+                <li><a href="tips.html" class="nav-link active">Tips & Courses</a></li>
+                <li><a href="legendarytv.html" class="nav-link">LegendaryTV</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="tips-hero">
+        <div class="container">
+            <h1 class="section-title">Level Up Your Gaming</h1>
+            <p class="hero-subtitle">Master every aspect of gaming with expert guides and courses</p>
+            
+            <!-- Category Filter -->
+            <div class="tips-categories">
+                <button class="category-btn active" data-category="all">All Topics</button>
+                <button class="category-btn" data-category="streaming">📹 Streaming</button>
+                <button class="category-btn" data-category="setup">🖥️ Setup Guides</button>
+                <button class="category-btn" data-category="skills">🎯 Gaming Skills</button>
+                <button class="category-btn" data-category="monetization">💰 Monetization</button>
+                <button class="category-btn" data-category="productivity">⚡ Productivity</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Course Banner -->
+    <section class="featured-course">
+        <div class="container">
+            <div class="featured-course-content">
+                <div class="course-badge">🏆 Premium Course</div>
+                <h2 class="featured-course-title">Complete Gaming Content Creator Masterclass</h2>
+                <p class="featured-course-description">
+                    Transform your gaming passion into a thriving online business. Learn streaming, YouTube growth, content creation, monetization strategies, and build your gaming empire from scratch.
+                </p>
+                <div class="course-details">
+                    <div class="course-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="rating-text">4.9/5 (2,847 reviews)</span>
+                    </div>
+                    <div class="course-stats">
+                        <span class="stat">📚 12 Hours</span>
+                        <span class="stat">🎥 156 Lessons</span>
+                        <span class="stat">📜 Certificate</span>
+                    </div>
+                </div>
+                <div class="course-price">
+                    <span class="current-price">$49.99</span>
+                    <span class="original-price">$149.99</span>
+                    <span class="discount">67% OFF</span>
+                </div>
+                <div class="featured-course-actions">
+                    <a href="https://www.udemy.com/course/gaming-content-creator/" target="_blank" rel="noopener" class="enroll-btn primary">
+                        Enroll Now - Limited Time
+                    </a>
+                    <button class="preview-btn" onclick="showCoursePreview()">
+                        👁️ Preview Course
+                    </button>
+                </div>
+            </div>
+            <div class="featured-course-visual">
+                <div class="course-thumbnail">🎓</div>
+                <div class="course-highlights">
+                    <div class="highlight">✅ Streaming Setup Guide</div>
+                    <div class="highlight">✅ YouTube Growth Strategy</div>
+                    <div class="highlight">✅ Monetization Techniques</div>
+                    <div class="highlight">✅ Brand Building</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips & Guides Grid -->
+    <section class="tips-section">
+        <div class="container">
+            <h2 class="section-title">Gaming Tips & Guides</h2>
+            
+            <div class="tips-grid" id="tips-grid">
+                <!-- Tips will be dynamically generated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Courses Section -->
+    <section class="free-courses">
+        <div class="container">
+            <h2 class="section-title">Free Gaming Courses</h2>
+            <div class="courses-grid">
+                <div class="course-card free">
+                    <div class="course-image">🎮</div>
+                    <div class="course-content">
+                        <div class="course-type">FREE</div>
+                        <h3>Gaming Setup Basics</h3>
+                        <p>Learn the fundamentals of building your gaming setup</p>
+                        <div class="course-stats">
+                            <span>⏱️ 2 hours</span>
+                            <span>👥 15K+ students</span>
+                        </div>
+                        <a href="#" class="course-btn">Start Free Course</a>
+                    </div>
+                </div>
+                
+                <div class="course-card free">
+                    <div class="course-image">📺</div>
+                    <div class="course-content">
+                        <div class="course-type">FREE</div>
+                        <h3>Streaming for Beginners</h3>
+                        <p>Get started with live streaming on Twitch and YouTube</p>
+                        <div class="course-stats">
+                            <span>⏱️ 3 hours</span>
+                            <span>👥 22K+ students</span>
+                        </div>
+                        <a href="#" class="course-btn">Start Free Course</a>
+                    </div>
+                </div>
+                
+                <div class="course-card free">
+                    <div class="course-image">🎯</div>
+                    <div class="course-content">
+                        <div class="course-type">FREE</div>
+                        <h3>Gaming Skills Training</h3>
+                        <p>Improve your gameplay with proven techniques</p>
+                        <div class="course-stats">
+                            <span>⏱️ 1.5 hours</span>
+                            <span>👥 18K+ students</span>
+                        </div>
+                        <a href="#" class="course-btn">Start Free Course</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Courses Section -->
+    <section class="premium-courses">
+        <div class="container">
+            <h2 class="section-title">Premium Gaming Courses</h2>
+            <div class="courses-grid">
+                <div class="course-card premium">
+                    <div class="course-image">💼</div>
+                    <div class="course-content">
+                        <div class="course-type">PREMIUM</div>
+                        <h3>Gaming Business Mastery</h3>
+                        <p>Build and scale your gaming business from zero to six figures</p>
+                        <div class="course-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span>4.8/5</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="current">$89.99</span>
+                            <span class="original">$199.99</span>
+                        </div>
+                        <a href="https://www.udemy.com/course/gaming-business/" target="_blank" rel="noopener" class="course-btn premium">Enroll Now</a>
+                    </div>
+                </div>
+                
+                <div class="course-card premium">
+                    <div class="course-image">🎨</div>
+                    <div class="course-content">
+                        <div class="course-type">PREMIUM</div>
+                        <h3>Content Creation Pro</h3>
+                        <p>Master video editing, thumbnails, and viral content strategies</p>
+                        <div class="course-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span>4.9/5</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="current">$69.99</span>
+                            <span class="original">$149.99</span>
+                        </div>
+                        <a href="https://www.skillshare.com/classes/content-creation" target="_blank" rel="noopener" class="course-btn premium">Enroll Now</a>
+                    </div>
+                </div>
+                
+                <div class="course-card premium">
+                    <div class="course-image">🏆</div>
+                    <div class="course-content">
+                        <div class="course-type">PREMIUM</div>
+                        <h3>Esports Champion Training</h3>
+                        <p>Train like a pro with advanced strategies and mental coaching</p>
+                        <div class="course-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span>4.7/5</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="current">$129.99</span>
+                            <span class="original">$249.99</span>
+                        </div>
+                        <a href="#" class="course-btn premium">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gaming Tools & Resources -->
+    <section class="gaming-tools">
+        <div class="container">
+            <h2 class="section-title">Essential Gaming Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">🎥</div>
+                    <h3>OBS Studio</h3>
+                    <p>Free streaming and recording software</p>
+                    <div class="tool-rating">⭐⭐⭐⭐⭐</div>
+                    <a href="https://obsproject.com/" target="_blank" rel="noopener" class="tool-btn">Download Free</a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">✂️</div>
+                    <h3>DaVinci Resolve</h3>
+                    <p>Professional video editing software</p>
+                    <div class="tool-rating">⭐⭐⭐⭐⭐</div>
+                    <a href="https://www.blackmagicdesign.com/products/davinciresolve/" target="_blank" rel="noopener" class="tool-btn">Download Free</a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">🎨</div>
+                    <h3>Canva Pro</h3>
+                    <p>Create stunning thumbnails and graphics</p>
+                    <div class="tool-rating">⭐⭐⭐⭐⭐</div>
+                    <a href="https://www.canva.com/pro/" target="_blank" rel="noopener" class="tool-btn affiliate">Try Free Trial</a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">📊</div>
+                    <h3>StreamLabs</h3>
+                    <p>Complete streaming suite with alerts</p>
+                    <div class="tool-rating">⭐⭐⭐⭐⭐</div>
+                    <a href="https://streamlabs.com/" target="_blank" rel="noopener" class="tool-btn">Get Started</a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">🎤</div>
+                    <h3>Audacity</h3>
+                    <p>Free audio editing and recording</p>
+                    <div class="tool-rating">⭐⭐⭐⭐⭐</div>
+                    <a href="https://www.audacityteam.org/" target="_blank" rel="noopener" class="tool-btn">Download Free</a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">📈</div>
+                    <h3>TubeBuddy</h3>
+                    <p>YouTube growth and optimization tools</p>
+                    <div class="tool-rating">⭐⭐⭐⭐⭐</div>
+                    <a href="https://www.tubebuddy.com/" target="_blank" rel="noopener" class="tool-btn affiliate">Start Free</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Instructors -->
+    <section class="instructors">
+        <div class="container">
+            <h2 class="section-title">Learn from Gaming Experts</h2>
+            <div class="instructors-grid">
+                <div class="instructor-card">
+                    <div class="instructor-avatar">👨‍💼</div>
+                    <h3>Alex "StreamKing" Johnson</h3>
+                    <p class="instructor-title">Professional Streamer & Content Creator</p>
+                    <div class="instructor-stats">
+                        <div class="stat">2.5M Followers</div>
+                        <div class="stat">50K+ Students</div>
+                        <div class="stat">5 Years Experience</div>
+                    </div>
+                    <p class="instructor-bio">Former Twitch Partner who built a gaming empire from his bedroom. Teaches proven strategies for content creation and audience building.</p>
+                </div>
+                
+                <div class="instructor-card">
+                    <div class="instructor-avatar">👩‍🎓</div>
+                    <h3>Sarah "TechSavvy" Miller</h3>
+                    <p class="instructor-title">Gaming Setup Specialist</p>
+                    <div class="instructor-stats">
+                        <div class="stat">100K+ Setups</div>
+                        <div class="stat">30K+ Students</div>
+                        <div class="stat">8 Years Experience</div>
+                    </div>
+                    <p class="instructor-bio">Hardware expert who has helped thousands optimize their gaming rigs. Specializes in budget builds and performance tuning.</p>
+                </div>
+                
+                <div class="instructor-card">
+                    <div class="instructor-avatar">👨‍⚕️</div>
+                    <h3>Mike "ProCoach" Chen</h3>
+                    <p class="instructor-title">Esports Performance Coach</p>
+                    <div class="instructor-stats">
+                        <div class="stat">Pro Team Coach</div>
+                        <div class="stat">15K+ Students</div>
+                        <div class="stat">10 Years Experience</div>
+                    </div>
+                    <p class="instructor-bio">Former professional player turned coach. Trains aspiring esports athletes in strategy, mechanics, and mental performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter & Community -->
+    <section class="learning-community">
+        <div class="container">
+            <div class="community-content">
+                <h2>Join the Learning Community</h2>
+                <p>Get weekly gaming tips, exclusive course discounts, and connect with fellow gamers on their journey to success.</p>
+                
+                <form class="newsletter-form" id="tips-newsletter">
+                    <input type="email" placeholder="Enter your email for free tips" required>
+                    <button type="submit">Join Community</button>
+                </form>
+                
+                <div class="community-benefits">
+                    <div class="benefit">
+                        <span class="benefit-icon">📧</span>
+                        <span>Weekly Pro Tips</span>
+                    </div>
+                    <div class="benefit">
+                        <span class="benefit-icon">💰</span>
+                        <span>Exclusive Discounts</span>
+                    </div>
+                    <div class="benefit">
+                        <span class="benefit-icon">🎯</span>
+                        <span>Free Resources</span>
+                    </div>
+                    <div class="benefit">
+                        <span class="benefit-icon">👥</span>
+                        <span>Community Access</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text">LEGENDARY</span>
+                        <span class="logo-accent">GAMER</span>
+                    </div>
+                    <p class="footer-tagline">Your Loadout, Your Legacy</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📺</a>
+                        <a href="#" class="social-link">🎵</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Learning Paths</h4>
+                    <ul>
+                        <li><a href="#" onclick="filterTips('streaming')">Streaming Mastery</a></li>
+                        <li><a href="#" onclick="filterTips('setup')">Setup Optimization</a></li>
+                        <li><a href="#" onclick="filterTips('skills')">Skill Development</a></li>
+                        <li><a href="#" onclick="filterTips('monetization')">Monetization</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Course Categories</h4>
+                    <ul>
+                        <li><a href="#">Beginner Friendly</a></li>
+                        <li><a href="#">Advanced Strategies</a></li>
+                        <li><a href="#">Business & Marketing</a></li>
+                        <li><a href="#">Technical Skills</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Free Downloads</a></li>
+                        <li><a href="#">Cheat Sheets</a></li>
+                        <li><a href="#">Templates</a></li>
+                        <li><a href="#">Tools & Software</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="disclaimer">
+                    ⚠️ Disclaimer: This site uses affiliate links. As an Amazon Associate and participant in other affiliate programs, we may earn commissions from qualifying purchases. This helps keep our content free and epic.
+                </p>
+                <p class="copyright">© 2024 Legendary Gamer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/tips.js"></script>
+</body>
+</html>

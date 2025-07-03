@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Games - Legendary Gamer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="stars"></div>
+        <div class="matrix-grid"></div>
+        <div class="glow-orbs"></div>
+    </div>
+
+    <!-- Glowing Border -->
+    <div class="disco-border"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">LEGENDARY</span>
+                <span class="logo-accent">GAMER</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="games.html" class="nav-link active">Games</a></li>
+                <li><a href="tips.html" class="nav-link">Tips & Courses</a></li>
+                <li><a href="legendarytv.html" class="nav-link">LegendaryTV</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="games-hero">
+        <div class="container">
+            <h1 class="section-title">Epic Game Collection</h1>
+            <p class="hero-subtitle">Discover the hottest games across all platforms</p>
+            
+            <!-- Platform Filter -->
+            <div class="platform-filter">
+                <button class="platform-btn active" data-platform="all">All Platforms</button>
+                <button class="platform-btn" data-platform="pc">🖥️ PC</button>
+                <button class="platform-btn" data-platform="playstation">🎮 PlayStation</button>
+                <button class="platform-btn" data-platform="xbox">🕹️ Xbox</button>
+                <button class="platform-btn" data-platform="nintendo">🎯 Nintendo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Game Banner -->
+    <section class="featured-game">
+        <div class="container">
+            <div class="featured-game-content">
+                <div class="featured-game-info">
+                    <div class="game-badge">🔥 Game of the Month</div>
+                    <h2 class="featured-game-title">Black Myth: Wukong</h2>
+                    <p class="featured-game-description">
+                        An action RPG rooted in Chinese mythology. You shall set out as the Destined One to venture into the challenges and marvels ahead, to uncover the obscured truth beneath the veil of a glorious legend from the past.
+                    </p>
+                    <div class="featured-game-details">
+                        <div class="game-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">9.2/10</span>
+                        </div>
+                        <div class="game-genre">Action RPG • Single Player</div>
+                        <div class="game-platforms">🖥️ PC • 🎮 PS5</div>
+                    </div>
+                    <div class="featured-game-actions">
+                        <a href="https://store.steampowered.com/app/2358720/Black_Myth_Wukong/" target="_blank" rel="noopener" class="buy-game-btn primary">
+                            Buy on Steam - $59.99
+                        </a>
+                        <a href="https://www.playstation.com/en-us/games/black-myth-wukong/" target="_blank" rel="noopener" class="buy-game-btn secondary">
+                            Buy on PlayStation
+                        </a>
+                    </div>
+                </div>
+                <div class="featured-game-visual">
+                    <div class="game-artwork">🐒</div>
+                    <div class="game-trailer-btn" onclick="openTrailer('wukong')">
+                        ▶️ Watch Trailer
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Grid -->
+    <section class="games-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trending Games</h2>
+                <div class="genre-filter">
+                    <select id="genre-filter" class="filter-select">
+                        <option value="all">All Genres</option>
+                        <option value="action">Action</option>
+                        <option value="rpg">RPG</option>
+                        <option value="fps">FPS</option>
+                        <option value="strategy">Strategy</option>
+                        <option value="sports">Sports</option>
+                        <option value="racing">Racing</option>
+                        <option value="indie">Indie</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="games-grid" id="games-grid">
+                <!-- Games will be dynamically generated -->
+            </div>
+            
+            <div class="load-more-section">
+                <button class="load-more-btn" id="load-more-btn">Load More Games</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Discovery -->
+    <section class="game-discovery">
+        <div class="container">
+            <h2 class="section-title">Discover Your Next Adventure</h2>
+            <div class="discovery-grid">
+                <div class="discovery-card">
+                    <div class="discovery-icon">🎯</div>
+                    <h3>Popular This Week</h3>
+                    <p>Most played games in the community</p>
+                    <button class="discovery-btn" onclick="filterGames('popular')">Explore</button>
+                </div>
+                
+                <div class="discovery-card">
+                    <div class="discovery-icon">⭐</div>
+                    <h3>Highest Rated</h3>
+                    <p>Games with 9+ ratings from critics</p>
+                    <button class="discovery-btn" onclick="filterGames('rated')">Discover</button>
+                </div>
+                
+                <div class="discovery-card">
+                    <div class="discovery-icon">🎮</div>
+                    <h3>New Releases</h3>
+                    <p>Fresh games just hit the market</p>
+                    <button class="discovery-btn" onclick="filterGames('new')">Check Out</button>
+                </div>
+                
+                <div class="discovery-card">
+                    <div class="discovery-icon">💎</div>
+                    <h3>Hidden Gems</h3>
+                    <p>Underrated masterpieces worth playing</p>
+                    <button class="discovery-btn" onclick="filterGames('hidden')">Find</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gaming Platforms -->
+    <section class="gaming-platforms">
+        <div class="container">
+            <h2 class="section-title">Shop by Platform</h2>
+            <div class="platforms-grid">
+                <div class="platform-card" data-platform="steam">
+                    <div class="platform-logo">💻</div>
+                    <h3>Steam</h3>
+                    <p>Ultimate PC Gaming Platform</p>
+                    <div class="platform-stats">30,000+ Games</div>
+                    <a href="https://store.steampowered.com/" target="_blank" rel="noopener" class="platform-link">
+                        Visit Store
+                    </a>
+                </div>
+                
+                <div class="platform-card" data-platform="playstation">
+                    <div class="platform-logo">🎮</div>
+                    <h3>PlayStation Store</h3>
+                    <p>Exclusive PS5 & PS4 Games</p>
+                    <div class="platform-stats">5,000+ Games</div>
+                    <a href="https://store.playstation.com/" target="_blank" rel="noopener" class="platform-link">
+                        Visit Store
+                    </a>
+                </div>
+                
+                <div class="platform-card" data-platform="xbox">
+                    <div class="platform-logo">🎯</div>
+                    <h3>Xbox Game Pass</h3>
+                    <p>Game Pass Ultimate Library</p>
+                    <div class="platform-stats">Game Pass</div>
+                    <a href="https://www.xbox.com/en-US/xbox-game-pass" target="_blank" rel="noopener" class="platform-link">
+                        Subscribe
+                    </a>
+                </div>
+                
+                <div class="platform-card" data-platform="nintendo">
+                    <div class="platform-logo">🎲</div>
+                    <h3>Nintendo eShop</h3>
+                    <p>Switch Exclusive Titles</p>
+                    <div class="platform-stats">3,000+ Games</div>
+                    <a href="https://www.nintendo.com/us/store/" target="_blank" rel="noopener" class="platform-link">
+                        Visit Store
+                    </a>
+                </div>
+                
+                <div class="platform-card" data-platform="epic">
+                    <div class="platform-logo">🚀</div>
+                    <h3>Epic Games</h3>
+                    <p>Free Games Every Week</p>
+                    <div class="platform-stats">Free Weekly</div>
+                    <a href="https://store.epicgames.com/" target="_blank" rel="noopener" class="platform-link">
+                        Visit Store
+                    </a>
+                </div>
+                
+                <div class="platform-card" data-platform="gog">
+                    <div class="platform-logo">🗡️</div>
+                    <h3>GOG</h3>
+                    <p>DRM-Free Gaming</p>
+                    <div class="platform-stats">DRM-Free</div>
+                    <a href="https://www.gog.com/" target="_blank" rel="noopener" class="platform-link">
+                        Visit Store
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gaming News -->
+    <section class="gaming-news">
+        <div class="container">
+            <h2 class="section-title">Latest Gaming News</h2>
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-image">🎮</div>
+                    <div class="news-content">
+                        <div class="news-category">Industry News</div>
+                        <h3>New Gaming Console Generation Coming 2025</h3>
+                        <p>Major gaming companies announce next-gen console development with revolutionary features...</p>
+                        <div class="news-meta">
+                            <span class="news-date">2 hours ago</span>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="news-image">🏆</div>
+                    <div class="news-content">
+                        <div class="news-category">Esports</div>
+                        <h3>Championship Tournament Prize Pool Reaches $50M</h3>
+                        <p>The biggest esports event of the year announces record-breaking prize pool...</p>
+                        <div class="news-meta">
+                            <span class="news-date">5 hours ago</span>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="news-image">🎯</div>
+                    <div class="news-content">
+                        <div class="news-category">Game Reviews</div>
+                        <h3>Top 10 Must-Play Games This Month</h3>
+                        <p>Our expert reviewers share the best gaming experiences you shouldn't miss...</p>
+                        <div class="news-meta">
+                            <span class="news-date">1 day ago</span>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gaming Communities -->
+    <section class="gaming-communities">
+        <div class="container">
+            <h2 class="section-title">Join Gaming Communities</h2>
+            <div class="communities-grid">
+                <div class="community-card">
+                    <div class="community-icon">💬</div>
+                    <h3>Discord Server</h3>
+                    <p>Chat with fellow gamers, find teammates, and get game recommendations</p>
+                    <div class="community-stats">25K+ Members</div>
+                    <a href="#" class="community-btn">Join Discord</a>
+                </div>
+                
+                <div class="community-card">
+                    <div class="community-icon">📺</div>
+                    <h3>Twitch Stream</h3>
+                    <p>Watch live gameplay, tutorials, and game reviews</p>
+                    <div class="community-stats">Live Daily</div>
+                    <a href="#" class="community-btn">Follow Stream</a>
+                </div>
+                
+                <div class="community-card">
+                    <div class="community-icon">📱</div>
+                    <h3>Reddit Community</h3>
+                    <p>Discuss games, share tips, and connect with gamers worldwide</p>
+                    <div class="community-stats">50K+ Gamers</div>
+                    <a href="#" class="community-btn">Join Reddit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text">LEGENDARY</span>
+                        <span class="logo-accent">GAMER</span>
+                    </div>
+                    <p class="footer-tagline">Your Loadout, Your Legacy</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📺</a>
+                        <a href="#" class="social-link">🎵</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Platforms</h4>
+                    <ul>
+                        <li><a href="https://store.steampowered.com/" target="_blank">Steam</a></li>
+                        <li><a href="https://store.playstation.com/" target="_blank">PlayStation</a></li>
+                        <li><a href="https://www.xbox.com/" target="_blank">Xbox</a></li>
+                        <li><a href="https://www.nintendo.com/" target="_blank">Nintendo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Genres</h4>
+                    <ul>
+                        <li><a href="#" onclick="filterByGenre('action')">Action Games</a></li>
+                        <li><a href="#" onclick="filterByGenre('rpg')">RPG Games</a></li>
+                        <li><a href="#" onclick="filterByGenre('fps')">FPS Games</a></li>
+                        <li><a href="#" onclick="filterByGenre('strategy')">Strategy Games</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="tips.html">Gaming Tips</a></li>
+                        <li><a href="legendarytv.html">Video Reviews</a></li>
+                        <li><a href="#">Game Guides</a></li>
+                        <li><a href="#">Hardware Compatibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="disclaimer">
+                    ⚠️ Disclaimer: This site uses affiliate links. As an Amazon Associate and participant in other affiliate programs, we may earn commissions from qualifying purchases. This helps keep our content free and epic.
+                </p>
+                <p class="copyright">© 2024 Legendary Gamer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/games.js"></script>
+</body>
+</html>

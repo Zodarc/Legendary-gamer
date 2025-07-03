@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Gear Shop - Legendary Gamer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="stars"></div>
+        <div class="matrix-grid"></div>
+        <div class="glow-orbs"></div>
+    </div>
+
+    <!-- Glowing Border -->
+    <div class="disco-border"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">LEGENDARY</span>
+                <span class="logo-accent">GAMER</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="shop.html" class="nav-link active">Shop</a></li>
+                <li><a href="games.html" class="nav-link">Games</a></li>
+                <li><a href="tips.html" class="nav-link">Tips & Courses</a></li>
+                <li><a href="legendarytv.html" class="nav-link">LegendaryTV</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="shop-hero">
+        <div class="container">
+            <h1 class="section-title">Gaming Gear Store</h1>
+            <p class="hero-subtitle">Level up your setup with elite gaming equipment</p>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search for gaming gear..." class="search-input">
+                <button class="search-btn" id="search-btn">🔍</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="category-filter">Category</label>
+                    <select id="category-filter" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="peripherals">Gaming Peripherals</option>
+                        <option value="hardware">PC Hardware</option>
+                        <option value="streaming">Streaming Gear</option>
+                        <option value="furniture">Gaming Furniture</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="price-filter">Price Range</label>
+                    <select id="price-filter" class="filter-select">
+                        <option value="all">All Prices</option>
+                        <option value="under-100">Under $100</option>
+                        <option value="100-300">$100 - $300</option>
+                        <option value="300-600">$300 - $600</option>
+                        <option value="over-600">Over $600</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="brand-filter">Brand</label>
+                    <select id="brand-filter" class="filter-select">
+                        <option value="all">All Brands</option>
+                        <option value="razer">Razer</option>
+                        <option value="logitech">Logitech</option>
+                        <option value="steelseries">SteelSeries</option>
+                        <option value="corsair">Corsair</option>
+                        <option value="asus">ASUS</option>
+                        <option value="nvidia">NVIDIA</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="sort-filter">Sort By</label>
+                    <select id="sort-filter" class="filter-select">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="newest">Newest</option>
+                    </select>
+                </div>
+                
+                <button class="clear-filters-btn" id="clear-filters">Clear Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-header">
+                <h2 class="section-title">Premium Gaming Gear</h2>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid">⊞</button>
+                    <button class="view-btn" data-view="list">☰</button>
+                </div>
+            </div>
+            
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be dynamically generated by JavaScript -->
+            </div>
+            
+            <div class="loading-indicator" id="loading-indicator">
+                <div class="loader"></div>
+                <p>Loading products...</p>
+            </div>
+            
+            <div class="no-results" id="no-results" style="display: none;">
+                <div class="no-results-icon">😕</div>
+                <h3>No products found</h3>
+                <p>Try adjusting your filters or search terms</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="featured-categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="peripherals">
+                    <div class="category-icon">🎮</div>
+                    <h3>Gaming Peripherals</h3>
+                    <p>Keyboards, Mice, Headsets & Controllers</p>
+                    <div class="product-count">15+ Products</div>
+                </div>
+                
+                <div class="category-card" data-category="hardware">
+                    <div class="category-icon">💻</div>
+                    <h3>PC Hardware</h3>
+                    <p>Graphics Cards, Monitors & Components</p>
+                    <div class="product-count">12+ Products</div>
+                </div>
+                
+                <div class="category-card" data-category="streaming">
+                    <div class="category-icon">📹</div>
+                    <h3>Streaming Gear</h3>
+                    <p>Cameras, Microphones & Stream Decks</p>
+                    <div class="product-count">8+ Products</div>
+                </div>
+                
+                <div class="category-card" data-category="furniture">
+                    <div class="category-icon">🪑</div>
+                    <h3>Gaming Furniture</h3>
+                    <p>Chairs, Desks & Gaming Storage</p>
+                    <div class="product-count">6+ Products</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Brands -->
+    <section class="top-brands">
+        <div class="container">
+            <h2 class="section-title">Top Gaming Brands</h2>
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <div class="brand-logo">🐍</div>
+                    <h3>Razer</h3>
+                    <p>For Gamers. By Gamers.</p>
+                </div>
+                
+                <div class="brand-card">
+                    <div class="brand-logo">🖱️</div>
+                    <h3>Logitech G</h3>
+                    <p>Advanced Gaming Gear</p>
+                </div>
+                
+                <div class="brand-card">
+                    <div class="brand-logo">⚔️</div>
+                    <h3>SteelSeries</h3>
+                    <p>Engineered to Win</p>
+                </div>
+                
+                <div class="brand-card">
+                    <div class="brand-logo">⚡</div>
+                    <h3>Corsair</h3>
+                    <p>We Make Great</p>
+                </div>
+                
+                <div class="brand-card">
+                    <div class="brand-logo">🛡️</div>
+                    <h3>ASUS ROG</h3>
+                    <p>Republic of Gamers</p>
+                </div>
+                
+                <div class="brand-card">
+                    <div class="brand-logo">🎯</div>
+                    <h3>NVIDIA</h3>
+                    <p>The Way It's Meant to be Played</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated on the Latest Gear</h2>
+                <p>Get exclusive deals, new product alerts, and gaming tips delivered to your inbox</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+                <p class="newsletter-disclaimer">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text">LEGENDARY</span>
+                        <span class="logo-accent">GAMER</span>
+                    </div>
+                    <p class="footer-tagline">Your Loadout, Your Legacy</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📺</a>
+                        <a href="#" class="social-link">🎵</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#" onclick="filterByCategory('peripherals')">Gaming Peripherals</a></li>
+                        <li><a href="#" onclick="filterByCategory('hardware')">PC Hardware</a></li>
+                        <li><a href="#" onclick="filterByCategory('streaming')">Streaming Gear</a></li>
+                        <li><a href="#" onclick="filterByCategory('furniture')">Gaming Furniture</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">Gaming Blog</a></li>
+                        <li><a href="#">Affiliate Program</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="disclaimer">
+                    ⚠️ Disclaimer: This site uses affiliate links. As an Amazon Associate and participant in other affiliate programs, we may earn commissions from qualifying purchases. This helps keep our content free and epic.
+                </p>
+                <p class="copyright">© 2024 Legendary Gamer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>

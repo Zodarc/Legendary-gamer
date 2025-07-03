@@ -1,0 +1,639 @@
+/* ============================================================================
+   LEGENDARY GAMER - Animations
+   Cyberpunk Visual Effects & Motion Graphics
+   ============================================================================ */
+
+/* ============================================================================
+   KEYFRAME ANIMATIONS
+   ============================================================================ */
+
+/* Background Stars Animation */
+@keyframes stars-twinkle {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.3;
+        transform: scale(1.2);
+    }
+}
+
+/* Matrix Grid Movement */
+@keyframes matrix-move {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(50px);
+    }
+}
+
+/* Floating Orbs */
+@keyframes orb-float {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+    }
+    25% {
+        transform: translateY(-20px) scale(1.1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-40px) scale(1.2);
+        opacity: 1;
+    }
+    75% {
+        transform: translateY(-20px) scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* Disco Border Pulse */
+@keyframes disco-pulse {
+    0% {
+        border-image-source: linear-gradient(45deg, 
+            #00ffff, #b833ff, #ff0080, #39ff14, #0080ff, #00ffff);
+        filter: brightness(1);
+    }
+    25% {
+        border-image-source: linear-gradient(45deg, 
+            #b833ff, #ff0080, #39ff14, #0080ff, #00ffff, #b833ff);
+        filter: brightness(1.2);
+    }
+    50% {
+        border-image-source: linear-gradient(45deg, 
+            #ff0080, #39ff14, #0080ff, #00ffff, #b833ff, #ff0080);
+        filter: brightness(1.5);
+    }
+    75% {
+        border-image-source: linear-gradient(45deg, 
+            #39ff14, #0080ff, #00ffff, #b833ff, #ff0080, #39ff14);
+        filter: brightness(1.2);
+    }
+    100% {
+        border-image-source: linear-gradient(45deg, 
+            #0080ff, #00ffff, #b833ff, #ff0080, #39ff14, #0080ff);
+        filter: brightness(1);
+    }
+}
+
+/* Title Glow Effect */
+@keyframes title-glow {
+    0% {
+        text-shadow: 
+            0 0 10px rgba(0, 255, 255, 0.8),
+            0 0 20px rgba(0, 255, 255, 0.6),
+            0 0 30px rgba(0, 255, 255, 0.4);
+    }
+    100% {
+        text-shadow: 
+            0 0 20px rgba(184, 51, 255, 0.8),
+            0 0 30px rgba(184, 51, 255, 0.6),
+            0 0 40px rgba(184, 51, 255, 0.4);
+    }
+}
+
+/* Glitch Effect */
+@keyframes glitch {
+    0%, 14%, 15%, 49%, 50%, 99%, 100% {
+        transform: translate(0);
+        filter: hue-rotate(0deg);
+    }
+    1%, 13% {
+        transform: translate(-2px, 2px);
+        filter: hue-rotate(90deg);
+    }
+    16%, 48% {
+        transform: translate(2px, -2px);
+        filter: hue-rotate(180deg);
+    }
+    51%, 98% {
+        transform: translate(-1px, 1px);
+        filter: hue-rotate(270deg);
+    }
+}
+
+/* Monitor Pulse */
+@keyframes monitor-pulse {
+    0%, 100% {
+        box-shadow: 
+            0 0 30px rgba(0, 255, 255, 0.5),
+            inset 0 0 20px rgba(0, 0, 0, 0.5);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 
+            0 0 50px rgba(184, 51, 255, 0.7),
+            inset 0 0 30px rgba(0, 0, 0, 0.3);
+        transform: scale(1.02);
+    }
+}
+
+/* Keyboard Wave */
+@keyframes keyboard-wave {
+    0% {
+        background: linear-gradient(90deg, 
+            #39ff14, #00ffff, #b833ff, #ff0080);
+        transform: translateX(0);
+    }
+    25% {
+        background: linear-gradient(90deg, 
+            #00ffff, #b833ff, #ff0080, #39ff14);
+        transform: translateX(2px);
+    }
+    50% {
+        background: linear-gradient(90deg, 
+            #b833ff, #ff0080, #39ff14, #00ffff);
+        transform: translateX(0);
+    }
+    75% {
+        background: linear-gradient(90deg, 
+            #ff0080, #39ff14, #00ffff, #b833ff);
+        transform: translateX(-2px);
+    }
+    100% {
+        background: linear-gradient(90deg, 
+            #39ff14, #00ffff, #b833ff, #ff0080);
+        transform: translateX(0);
+    }
+}
+
+/* Floating Icons */
+@keyframes float-around {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        filter: drop-shadow(0 0 10px #00ffff);
+    }
+    25% {
+        transform: translate(20px, -20px) rotate(90deg);
+        filter: drop-shadow(0 0 15px #b833ff);
+    }
+    50% {
+        transform: translate(0, -40px) rotate(180deg);
+        filter: drop-shadow(0 0 20px #ff0080);
+    }
+    75% {
+        transform: translate(-20px, -20px) rotate(270deg);
+        filter: drop-shadow(0 0 15px #39ff14);
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+        filter: drop-shadow(0 0 10px #00ffff);
+    }
+}
+
+/* ============================================================================
+   SCROLL ANIMATIONS
+   ============================================================================ */
+
+/* Fade In Up */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade In Left */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade In Right */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scale In */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Rotate In */
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-10deg) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+/* ============================================================================
+   SCROLL TRIGGER CLASSES
+   ============================================================================ */
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.scroll-animate.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-animate.fade-left {
+    transform: translateX(-30px);
+}
+
+.scroll-animate.fade-left.in-view {
+    transform: translateX(0);
+}
+
+.scroll-animate.fade-right {
+    transform: translateX(30px);
+}
+
+.scroll-animate.fade-right.in-view {
+    transform: translateX(0);
+}
+
+.scroll-animate.scale {
+    transform: scale(0.8);
+}
+
+.scroll-animate.scale.in-view {
+    transform: scale(1);
+}
+
+.scroll-animate.rotate {
+    transform: rotate(-5deg) scale(0.9);
+}
+
+.scroll-animate.rotate.in-view {
+    transform: rotate(0deg) scale(1);
+}
+
+/* ============================================================================
+   HOVER EFFECTS
+   ============================================================================ */
+
+/* Neon Glow Hover */
+.neon-hover {
+    transition: all 0.3s ease;
+}
+
+.neon-hover:hover {
+    text-shadow: 
+        0 0 5px currentColor,
+        0 0 10px currentColor,
+        0 0 15px currentColor;
+    transform: translateY(-2px);
+}
+
+/* Border Glow Hover */
+.border-glow-hover {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.border-glow-hover::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        #00ffff, #b833ff, #ff0080, #39ff14);
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.border-glow-hover:hover::before {
+    opacity: 1;
+}
+
+/* Pulse Effect */
+.pulse-hover {
+    transition: all 0.3s ease;
+}
+
+.pulse-hover:hover {
+    animation: pulse-effect 0.6s ease-in-out;
+}
+
+@keyframes pulse-effect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ============================================================================
+   LOADING ANIMATIONS
+   ============================================================================ */
+
+/* Spinning Loader */
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(0, 255, 255, 0.3);
+    border-top: 3px solid #00ffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Dots Loader */
+.dots-loader {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.dots-loader div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #00ffff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.dots-loader div:nth-child(1) {
+    left: 8px;
+    animation: dots1 0.6s infinite;
+}
+
+.dots-loader div:nth-child(2) {
+    left: 8px;
+    animation: dots2 0.6s infinite;
+}
+
+.dots-loader div:nth-child(3) {
+    left: 32px;
+    animation: dots2 0.6s infinite;
+}
+
+.dots-loader div:nth-child(4) {
+    left: 56px;
+    animation: dots3 0.6s infinite;
+}
+
+@keyframes dots1 {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+@keyframes dots3 {
+    0% { transform: scale(1); }
+    100% { transform: scale(0); }
+}
+
+@keyframes dots2 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(24px, 0); }
+}
+
+/* ============================================================================
+   PARTICLE EFFECTS
+   ============================================================================ */
+
+.particle-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #00ffff;
+    border-radius: 50%;
+    animation: particle-float 3s linear infinite;
+}
+
+.particle:nth-child(even) {
+    background: #b833ff;
+    animation-duration: 4s;
+}
+
+.particle:nth-child(3n) {
+    background: #ff0080;
+    animation-duration: 5s;
+}
+
+@keyframes particle-float {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(90vh) scale(1);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(-10vh) scale(1);
+    }
+    100% {
+        transform: translateY(-20vh) scale(0);
+        opacity: 0;
+    }
+}
+
+/* ============================================================================
+   TEXT EFFECTS
+   ============================================================================ */
+
+/* Typing Effect */
+.typing-effect {
+    overflow: hidden;
+    border-right: 3px solid #00ffff;
+    white-space: nowrap;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #00ffff }
+}
+
+/* Neon Text Effect */
+.neon-text {
+    color: #fff;
+    text-shadow:
+        0 0 5px #00ffff,
+        0 0 10px #00ffff,
+        0 0 15px #00ffff,
+        0 0 20px #00ffff,
+        0 0 35px #00ffff,
+        0 0 40px #00ffff;
+    animation: neon-flicker 1.5s infinite alternate;
+}
+
+@keyframes neon-flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+            0 0 5px #00ffff,
+            0 0 10px #00ffff,
+            0 0 15px #00ffff,
+            0 0 20px #00ffff,
+            0 0 35px #00ffff,
+            0 0 40px #00ffff;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+/* ============================================================================
+   SPECIAL ANIMATIONS FOR COMPONENTS
+   ============================================================================ */
+
+/* Product Card Entry Animation */
+.product-card.animate-in {
+    animation: slideInFromBottom 0.6s ease-out forwards;
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Category Card Hover Animation */
+.category-card.pulse {
+    animation: category-pulse 2s ease-in-out infinite;
+}
+
+@keyframes category-pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.7);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 10px rgba(0, 255, 255, 0);
+    }
+}
+
+/* Hero Title Animation */
+.title-word {
+    animation-delay: var(--delay, 0ms);
+}
+
+.title-word.animate {
+    animation: titleWordAppear 0.8s ease-out forwards;
+}
+
+@keyframes titleWordAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) rotateX(90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotateX(0deg);
+    }
+}
+
+/* Navigation Link Active Animation */
+.nav-link.active {
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00ffff, #b833ff);
+    animation: underlineExpand 0.3s ease-out forwards;
+}
+
+@keyframes underlineExpand {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+/* Performance optimizations */
+.gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-animate,
+    .typing-effect,
+    .neon-text,
+    .particle {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    .scroll-animate {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

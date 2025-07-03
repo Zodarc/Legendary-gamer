@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legendary Gamer - Your Loadout, Your Legacy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="stars"></div>
+        <div class="matrix-grid"></div>
+        <div class="glow-orbs"></div>
+    </div>
+
+    <!-- Glowing Border -->
+    <div class="disco-border"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">LEGENDARY</span>
+                <span class="logo-accent">GAMER</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="games.html" class="nav-link">Games</a></li>
+                <li><a href="tips.html" class="nav-link">Tips & Courses</a></li>
+                <li><a href="legendarytv.html" class="nav-link">LegendaryTV</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-title">
+                <h1 class="main-title">
+                    <span class="title-word" data-delay="0">LEGENDARY</span>
+                    <span class="title-word" data-delay="200">GAMER</span>
+                </h1>
+                <div class="glitch-effect">LEGENDARY GAMER</div>
+            </div>
+            <p class="hero-subtitle">Your Loadout, Your Legacy</p>
+            <p class="hero-description">Discover elite gaming gear, master new skills, and build your ultimate setup. Join the ranks of legendary gamers.</p>
+            <a href="shop.html" class="cta-button">
+                <span>Gear Up Now</span>
+                <div class="button-glow"></div>
+            </a>
+        </div>
+        <div class="hero-visual">
+            <div class="gaming-setup">
+                <div class="monitor-glow"></div>
+                <div class="keyboard-lights"></div>
+                <div class="floating-icons">
+                    <div class="icon">🎮</div>
+                    <div class="icon">⚡</div>
+                    <div class="icon">🎯</div>
+                    <div class="icon">🔥</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products" id="featured-products">
+        <div class="container">
+            <h2 class="section-title">Featured Gear</h2>
+            <div class="products-slider" id="products-slider">
+                <button class="slider-btn prev-btn" id="prev-btn">‹</button>
+                <div class="products-track" id="products-track">
+                    <!-- Product cards will be dynamically generated -->
+                </div>
+                <button class="slider-btn next-btn" id="next-btn">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Explore Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="peripherals">
+                    <div class="category-icon">🎮</div>
+                    <h3>Gaming Peripherals</h3>
+                    <p>Keyboards, Mice, Headsets</p>
+                </div>
+                <div class="category-card" data-category="hardware">
+                    <div class="category-icon">💻</div>
+                    <h3>PC Hardware</h3>
+                    <p>Graphics Cards, Monitors, Components</p>
+                </div>
+                <div class="category-card" data-category="streaming">
+                    <div class="category-icon">📹</div>
+                    <h3>Streaming Gear</h3>
+                    <p>Cameras, Microphones, Lighting</p>
+                </div>
+                <div class="category-card" data-category="furniture">
+                    <div class="category-icon">🪑</div>
+                    <h3>Gaming Furniture</h3>
+                    <p>Chairs, Desks, Storage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Content Section -->
+    <section class="latest-content" id="latest-content">
+        <div class="container">
+            <h2 class="section-title">Latest Content</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <div class="content-image">
+                        <div class="placeholder-img">📺</div>
+                    </div>
+                    <div class="content-info">
+                        <span class="content-type">Video</span>
+                        <h3>Ultimate Gaming Setup Tour 2024</h3>
+                        <p>Check out the most insane gaming setups...</p>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="content-image">
+                        <div class="placeholder-img">📖</div>
+                    </div>
+                    <div class="content-info">
+                        <span class="content-type">Guide</span>
+                        <h3>Budget Gaming PC Build Guide</h3>
+                        <p>Build a powerful gaming PC under $1000...</p>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="content-image">
+                        <div class="placeholder-img">🎯</div>
+                    </div>
+                    <div class="content-info">
+                        <span class="content-type">Tips</span>
+                        <h3>Pro Gaming Settings Guide</h3>
+                        <p>Optimize your settings like the pros...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text">LEGENDARY</span>
+                        <span class="logo-accent">GAMER</span>
+                    </div>
+                    <p class="footer-tagline">Your Loadout, Your Legacy</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📺</a>
+                        <a href="#" class="social-link">🎵</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="games.html">Games</a></li>
+                        <li><a href="tips.html">Tips & Courses</a></li>
+                        <li><a href="legendarytv.html">LegendaryTV</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Gaming Peripherals</a></li>
+                        <li><a href="#">PC Hardware</a></li>
+                        <li><a href="#">Streaming Gear</a></li>
+                        <li><a href="#">Gaming Furniture</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Join Discord</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="disclaimer">
+                    ⚠️ Disclaimer: This site uses affiliate links. As an Amazon Associate and participant in other affiliate programs, we may earn commissions from qualifying purchases. This helps keep our content free and epic.
+                </p>
+                <p class="copyright">© 2024 Legendary Gamer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
