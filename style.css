@@ -1,0 +1,101 @@
+/* === GLOBAL STYLES === */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #0e0e10;
+  color: #f2f2f2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* === NAVIGATION === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2.5rem;
+  background-color: #0e0e10;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #1f1f22;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2b9eff;
+}
+
+.logo-icon {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+}
+
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #2b9eff;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-input {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #1c1c1e;
+  color: #fff;
+}
+
+.lang-toggle {
+  font-size: 0.9rem;
+  color: #a1a1aa;
+  cursor: pointer;
+}
+
+.sign-in {
+  background-color: #2b9eff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.sign-in:hover {
+  background-color: #1f8fe8;
+}
