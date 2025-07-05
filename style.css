@@ -34,7 +34,7 @@ ul {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
   color: #2b9eff;
@@ -98,4 +98,128 @@ ul {
 
 .sign-in:hover {
   background-color: #1f8fe8;
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 5% 4rem; /* ⬅️ less top padding, more bottom if needed */
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 90vh;
+  background-image: url('hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(10, 10, 10, 0.65);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding-right: 1rem;
+}
+
+.hero-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.hero-logo img {
+  height: 48px;
+  width: auto;
+}
+
+.hero-logo h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.primary-btn {
+  background-color: #2b9eff;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background-color: #1a8ce5;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: #2b9eff;
+  border: 2px solid #2b9eff;
+}
+
+.secondary-btn:hover {
+  background-color: #2b9eff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.hero-video {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+}
+
+.hero-video video {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
