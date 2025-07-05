@@ -18,11 +18,10 @@
           <img src="logo.ico" alt="Icon" class="logo-icon" />
           <span class="brand-name">LEGENDARY GAMER</span>
         </div>
-
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <button class="menu-toggle" id="menuToggle">☰</button>
       </div>
 
-      <ul class="nav-links" id="mobileMenu">
+      <ul class="nav-links" id="navLinks">
         <li><a href="#">Home</a></li>
         <li><a href="#">Shop</a></li>
         <li><a href="#">Games</a></li>
@@ -65,10 +64,11 @@
       </div>
     </section>
     <script>
-      function toggleMenu() {
-        const menu = document.getElementById("mobileMenu");
-        menu.classList.toggle("show");
-      }
+      document
+        .getElementById("menuToggle")
+        .addEventListener("click", function () {
+          document.getElementById("navLinks").classList.toggle("show");
+        });
     </script>
   </body>
 </html>
