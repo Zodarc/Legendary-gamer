@@ -286,24 +286,6 @@ ul {
     font-size: 1rem;
   }
 
-  /* === NAVBAR === */
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 100%;
-  }
-
-  .search-language {
-    width: 100%;
-    justify-content: space-between;
-  }
-
   /* === HERO === */
   .hero {
     grid-template-columns: 1fr;
@@ -361,3 +343,52 @@ ul {
     gap: 1rem;
   }
 }
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+  }
+
+  .nav-left {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    color: #fff;
+    padding: 0.5rem 0;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .sign-in {
+    width: 100%;
+    text-align: center;
+  }
+}
+
