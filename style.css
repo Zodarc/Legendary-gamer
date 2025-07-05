@@ -223,3 +223,43 @@ ul {
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .hero-logo {
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .hero-video {
+    margin-top: 2rem;
+    max-width: 100%;
+  }
+
+  .hero-video video {
+    max-height: 300px;
+  }
+}
