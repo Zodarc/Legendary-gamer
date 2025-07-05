@@ -15,22 +15,25 @@
     <nav class="navbar">
       <div class="nav-left">
         <div class="logo">
-          <img src="logo.ico" alt="Legendary Gamer Logo" class="logo-icon" />
-          <span>LEGENDARY GAMER</span>
+          <img src="logo.ico" alt="Icon" class="logo-icon" />
+          <span class="brand-name">LEGENDARY GAMER</span>
         </div>
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">Games</a></li>
-          <li><a href="#">Courses</a></li>
-          <li><a href="#">LegendaryTV</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       </div>
+
+      <ul class="nav-links" id="mobileMenu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Games</a></li>
+        <li><a href="#">Tips & Courses</a></li>
+        <li><a href="#">LegendaryTV</a></li>
+      </ul>
+
       <div class="nav-right">
-        <input type="text" class="search-input" placeholder="Search..." />
+        <input class="search-input" type="text" placeholder="Search..." />
         <span class="lang-toggle">EN</span>
-        <a href="#" class="sign-in">Sign In</a>
+        <button class="sign-in">Sign In</button>
       </div>
     </nav>
 
