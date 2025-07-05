@@ -390,3 +390,19 @@ ul {
     width: 100%;
   }
 }
+/* === HERO LOGO MOBILE === */
+@media (max-width: 768px) {
+  .hero-logo {
+    flex-direction: column;
+    gap: 0.3rem;
+    text-align: center;
+  }
+
+  .hero-logo img {
+    height: 35px;
+  }
+
+  .hero-logo h2 {
+    font-size: 1.6rem;
+  }
+}
