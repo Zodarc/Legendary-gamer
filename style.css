@@ -406,3 +406,101 @@ ul {
     font-size: 1.6rem;
   }
 }
+/* === BLOG SECTION CSS === */
+
+.blog-section {
+  background-color: #0e0e10;
+  padding: 4rem 2rem;
+  color: white;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  font-size: 1.9rem;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.view-all {
+  padding: 0.5rem 1rem;
+  border: 1px solid #555;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.view-all:hover {
+  border-color: #2b9eff;
+  color: #2b9eff;
+}
+
+.blog-cards {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+}
+
+.blog-card {
+  background-color: #1a1a1d;
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  flex: 0 0 400px; /* ⬅️ Wider card */
+  box-shadow: 0 0 20px rgba(43, 158, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card img {
+  width: 140px; /* ⬅️ More visual thumbnail */
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+
+.blog-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.blog-content p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+
+.label {
+  background-color: #2b9eff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  width: fit-content;
+  font-weight: 600;
+  color: black;
+}
