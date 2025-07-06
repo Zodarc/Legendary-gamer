@@ -531,3 +531,62 @@ ul {
     background-position: 0% 50%;
   }
 }
+/* === Typing Animation === */
+.hero-title {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #fff;
+  min-height: 60px;
+}
+
+.cursor {
+  display: inline-block;
+  font-weight: 700;
+  color: #2b9eff;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* === Subtitle Bounce-In (Word by Word) === */
+.animate-subtitle {
+  display: inline-block;
+  animation: bounceWords 3s ease-in-out infinite;
+}
+
+@keyframes bounceWords {
+  0%   { transform: translateY(0); opacity: 0.3; }
+  20%  { transform: translateY(-6px); opacity: 1; }
+  40%  { transform: translateY(0); }
+  60%  { transform: translateY(-3px); }
+  80%  { transform: translateY(0); }
+  100% { transform: translateY(0); }
+}
+
+/* === Buttons Entrance Animation === */
+.animate-btn {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: btnFadeIn 1s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes btnFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Button Glow on Hover === */
+.primary-btn:hover,
+.secondary-btn:hover {
+  box-shadow: 0 0 15px #2b9eff;
+  transform: scale(1.03);
+}
