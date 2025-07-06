@@ -504,3 +504,20 @@ ul {
   font-weight: 600;
   color: black;
 }
+.blog-section {
+  background: linear-gradient(-45deg, #0e0e10, #141416, #0e0e10, #1a1a1d);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

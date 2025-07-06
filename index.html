@@ -9,6 +9,11 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Titillium+Web:wght@700&display=swap"
       rel="stylesheet"
     />
+    <!-- AOS Library CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- === NAVIGATION BAR === -->
@@ -72,30 +77,34 @@
       </div>
 
       <div class="blog-cards">
-        <div class="blog-card">
-          <img src="thumb1.jpg" alt="Top 5 Pro Setups" />
-          <div class="blog-content">
-            <h3>Top 5 Pro Gaming Setups</h3>
-            <p>Explore elite setups with full gear breakdowns.</p>
-            <span class="label">Event</span>
+        <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="blog-card">
+            <img src="thumb1.jpg" alt="Top 5 Pro Setups" />
+            <div class="blog-content">
+              <h3>Top 5 Pro Gaming Setups</h3>
+              <p>Explore elite setups with full gear breakdowns.</p>
+              <span class="label">Event</span>
+            </div>
           </div>
         </div>
-
-        <div class="blog-card">
-          <img src="thumb2.jpg" alt="PC vs Console" />
-          <div class="blog-content">
-            <h3>Console vs PC in 2025</h3>
-            <p>Breaking down performance and budget options.</p>
-            <span class="label">News</span>
+        <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="blog-card">
+            <img src="thumb2.jpg" alt="PC vs Console" />
+            <div class="blog-content">
+              <h3>Console vs PC in 2025</h3>
+              <p>Breaking down performance and budget options.</p>
+              <span class="label">News</span>
+            </div>
           </div>
         </div>
-
-        <div class="blog-card">
-          <img src="thumb3.jpg" alt="Budget Gear" />
-          <div class="blog-content">
-            <h3>Starter Loadout: Gear Under $200</h3>
-            <p>Affordable but high-performing picks for new gamers.</p>
-            <span class="label">News</span>
+        <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="blog-card">
+            <img src="thumb3.jpg" alt="Budget Gear" />
+            <div class="blog-content">
+              <h3>Starter Loadout: Gear Under $200</h3>
+              <p>Affordable but high-performing picks for new gamers.</p>
+              <span class="label">News</span>
+            </div>
           </div>
         </div>
       </div>
@@ -107,6 +116,15 @@
         .addEventListener("click", function () {
           document.getElementById("navLinks").classList.toggle("show");
         });
+    </script>
+
+    <!-- AOS Library JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
     </script>
   </body>
 </html>
