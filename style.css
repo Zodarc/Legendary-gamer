@@ -115,11 +115,17 @@ ul {
   max-width: 1400px;
   margin: 0 auto;
   min-height: 90vh;
-  background-image: url('hero-bg.jpg');
+  background-image: url('herobg5.jpg');
   background-size: cover;
   background-position: center;
   color: #ffffff;
   overflow: hidden;
+  margin-bottom: 0;
+  padding-bottom: 2rem; /* Or less */
+  border-bottom: none;
+  box-shadow: none;
+  background-position: center bottom;
+  background-size: cover;
 }
 
 
