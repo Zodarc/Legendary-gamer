@@ -409,61 +409,78 @@ ul {
 /* === BLOG SECTION CSS === */
 
 .blog-section {
-  background-color: #0e0e10;
-  padding: 4rem 2rem;
-  color: white;
+  position: relative;
+  padding: 5rem 2rem;
+  overflow: hidden;
 }
 
-.section-header {
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.background-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(10px) brightness(0.4) saturate(2);
+}
+
+.blog-section > *:not(.background-video) {
+  position: relative;
+  z-index: 2;
+}
+
+.blog-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  color: white;
 }
 
-.section-header h2 {
-  font-size: 1.9rem;
-  font-family: 'Titillium Web', sans-serif;
+.blog-header h2 {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .view-all {
-  padding: 0.5rem 1rem;
-  border: 1px solid #555;
-  border-radius: 6px;
-  color: #fff;
+  color: #2b9eff;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.9rem;
-  transition: 0.3s;
-}
-
-.view-all:hover {
-  border-color: #2b9eff;
-  color: #2b9eff;
 }
 
 .blog-cards {
   display: flex;
   gap: 1.5rem;
   overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
 }
 
 .blog-card {
-  background-color: #1a1a1d;
+  background-color: rgba(26, 26, 29, 0.95);
   display: flex;
   border-radius: 12px;
   overflow: hidden;
-  flex: 0 0 400px; /* ⬅️ Wider card */
+  flex: 0 0 400px;
   box-shadow: 0 0 20px rgba(43, 158, 255, 0.05);
   transition: transform 0.3s ease;
+  scroll-snap-align: start;
 }
 
-.blog-card:hover {
+.blog-card:hover,
+.blog-card:focus {
   transform: translateY(-5px);
 }
 
 .blog-card img {
-  width: 140px; /* ⬅️ More visual thumbnail */
+  width: 160px;
   height: 100%;
   object-fit: cover;
 }
@@ -474,14 +491,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   gap: 0.4rem;
-}
-
-
-.blog-content {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  color: white;
 }
 
 .blog-content h3 {
@@ -494,20 +504,14 @@ ul {
   color: #ccc;
 }
 
-
-.label {
+.tag {
   background-color: #2b9eff;
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
   font-size: 0.75rem;
   width: fit-content;
-  font-weight: 600;
-  color: black;
-}
-.blog-section {
-  background: linear-gradient(-45deg, #0e0e10, #141416, #0e0e10, #1a1a1d);
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
+  margin-top: 0.5rem;
 }
 
 @keyframes gradientShift {
