@@ -115,7 +115,7 @@ ul {
   max-width: 1400px;
   margin: 0 auto;
   min-height: 90vh;
-  background-image: url('herobg5.jpg');
+  background-image: url('herobg5.png');
   background-size: cover;
   background-position: center;
   color: #ffffff;
@@ -253,11 +253,23 @@ ul {
     font-size: 2.5rem;
   }
 
-  .hero-subtitle {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 1.5rem;
+.hero-subtitle span {
+  display: inline-block;
+  animation: fadeBounce 3s ease-in-out infinite;
+  white-space: nowrap;
+}
+
+@keyframes fadeBounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.8;
   }
+  50% {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+}
+
 
   .hero-buttons {
     justify-content: center;
@@ -589,4 +601,47 @@ ul {
 .secondary-btn:hover {
   box-shadow: 0 0 15px #2b9eff;
   transform: scale(1.03);
+}
+.hero-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.2rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: logoFadeIn 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes logoFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-logo h2 {
+  font-family: 'Eurostile Std Bold Extended #2', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.hero-logo h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  width: 120%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2b9eff, transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: -100%; }
 }
