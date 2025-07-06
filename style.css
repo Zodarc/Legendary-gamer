@@ -411,6 +411,16 @@ ul {
     max-height: 300px;
   }
 
+  .gear-assembly {
+  width: 100%;
+  height: auto;
+  background-color: #0a0a0a;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+
   /* === BLOG CARDS === */
   .blog-section .cards {
     flex-direction: column;
