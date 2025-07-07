@@ -448,21 +448,6 @@ ul {
   }
 }
 
-/* === GEAR ASSEMBLY 3D SCENE === */
-#gear-assemble {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-  background: transparent;
-  z-index: 0;
-}
-
-#three-canvas {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
 
 /* === Color Cycle Keyframes for Hero Title === */
 @keyframes colorCycle {
@@ -471,30 +456,6 @@ ul {
   50%, 74%  { color: #39ff14; } /* Neon Green */
   75%, 99%  { color: #ff3b3b; } /* Red */
   100%      { color: #9c27b0; }
-}
-/* === RGB FOG CURSOR === */
-
-.rgb-fog {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 300px;
-  height: 300px;
-  pointer-events: none;
-  background: radial-gradient(circle at center, rgba(255, 0, 255, 0.15), transparent 70%);
-  mix-blend-mode: screen;
-  filter: blur(100px);
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  animation: fogColorShift 8s infinite linear;
-}
-
-@keyframes fogColorShift {
-  0% { background: radial-gradient(circle at center, rgba(255, 0, 255, 0.15), transparent 70%); }
-  25% { background: radial-gradient(circle at center, rgba(0, 255, 255, 0.15), transparent 70%); }
-  50% { background: radial-gradient(circle at center, rgba(0, 255, 0, 0.15), transparent 70%); }
-  75% { background: radial-gradient(circle at center, rgba(255, 255, 0, 0.15), transparent 70%); }
-  100% { background: radial-gradient(circle at center, rgba(255, 0, 255, 0.15), transparent 70%); }
 }
 /* === Mobile Nav Toggle === */
 .menu-toggle {
