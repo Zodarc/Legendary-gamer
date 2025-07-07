@@ -496,3 +496,38 @@ ul {
   75% { background: radial-gradient(circle at center, rgba(255, 255, 0, 0.15), transparent 70%); }
   100% { background: radial-gradient(circle at center, rgba(255, 0, 255, 0.15), transparent 70%); }
 }
+/* === Mobile Nav Toggle === */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-center {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+    animation: slideDown 0.4s ease forwards;
+  }
+
+  .nav-center.show {
+    display: flex;
+  }
+
+  @keyframes slideDown {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
+
