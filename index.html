@@ -216,7 +216,16 @@
         document.querySelector(".nav-center").classList.toggle("show");
       });
     </script>
+    <script>
+      const fog = document.getElementById("fog");
+      document.addEventListener("mousemove", (e) => {
+        fog.style.left = e.clientX + "px";
+        fog.style.top = e.clientY + "px";
+      });
+    </script>
 
     <script src="script.js"></script>
+    <!-- RGB Fog Effect -->
+    <div class="rgb-fog" id="fog"></div>
   </body>
 </html>
