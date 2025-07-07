@@ -46,7 +46,7 @@
         </select>
         <a href="#" class="btn-login">Log in</a>
         <a href="#" class="btn-signup">Sign up</a>
-        <button id="menuToggle" class="hamburger">☰</button>
+        <button id="menuToggle" class="menu-toggle hamburger">☰</button>
       </div>
     </header>
 
@@ -211,11 +211,11 @@
       });
     </script>
 
-    <script>
-      document.getElementById("menuToggle").addEventListener("click", () => {
-        document.querySelector(".nav-center").classList.toggle("show");
-      });
-    </script>
+    const menuToggle = document.getElementById("menuToggle"); const navCenter =
+    document.querySelector(".nav-center"); menuToggle.addEventListener("click",
+    () => { navCenter.classList.toggle("show");
+    menuToggle.classList.toggle("open"); });
+
     <script>
       const fog = document.getElementById("fog");
       document.addEventListener("mousemove", (e) => {

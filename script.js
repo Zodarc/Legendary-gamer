@@ -32,3 +32,11 @@ function typeLoop() {
 
 document.addEventListener("DOMContentLoaded", typeLoop);
 
+const menuToggle = document.getElementById("menuToggle");
+const navCenter = document.querySelector(".nav-center");
+
+menuToggle.addEventListener("click", () => {
+  navCenter.classList.toggle("show");
+  menuToggle.classList.toggle("open");
+});
+
