@@ -9,7 +9,6 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Titillium+Web:wght@700&display=swap"
       rel="stylesheet"
     />
-    <!-- AOS Library CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
       rel="stylesheet"
@@ -17,7 +16,7 @@
   </head>
   <body>
     <!-- === TOP BAR === -->
-    <div class="top-bar">
+    <div class="top-bar animate-top-bar">
       <span class="top-message"
         >🔥 Join the Legendary Army — Get Weekly Gear Drops + Insider
         Tips!</span
@@ -26,7 +25,7 @@
     </div>
 
     <!-- === NAVIGATION BAR === -->
-    <header class="navbar-glass animate-fade-in">
+    <header class="navbar-glass animate-fade-in bordered-nav">
       <div class="nav-left">
         <img src="logo.ico" alt="Legendary Gamer Logo" class="logo-icon" />
         <span class="brand-name">LEGENDARY GAMER</span>
@@ -47,6 +46,7 @@
         </select>
         <a href="#" class="btn-login">Log in</a>
         <a href="#" class="btn-signup">Sign up</a>
+        <button id="menuToggle" class="hamburger">☰</button>
       </div>
     </header>
 
@@ -54,12 +54,13 @@
     <section class="hero">
       <div class="hero-overlay"></div>
 
-      <div class="hero-content">
-        <div class="hero-logo">
-          <img src="logo.ico" alt="Legendary Gamer Logo" />
-          <h2>LEGENDARY GAMER</h2>
-        </div>
+      <!-- Rotating Line Animation -->
+      <div class="rotating-ring"></div>
 
+      <!-- Bouncing Ball -->
+      <div class="bouncing-ball"></div>
+
+      <div class="hero-content">
         <h1 class="hero-title">
           <span id="typed-text"></span><span class="cursor">|</span>
         </h1>
@@ -77,65 +78,19 @@
       </div>
 
       <div class="hero-video">
-        <video autoplay muted loop playsinline>
+        <video id="hero-video" muted loop playsinline preload="none">
           <source src="rgb-blur-bg.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
     </section>
+
     <!-- === GEAR ASSEMBLY 3D SCENE === -->
     <section id="gear-assemble">
       <canvas id="three-canvas"></canvas>
     </section>
-    <script type="module">
-      import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js";
-      import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/loaders/GLTFLoader.js";
-      import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/controls/OrbitControls.js";
 
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(
-        75,
-        window.innerWidth / window.innerHeight,
-        0.1,
-        1000
-      );
-      const renderer = new THREE.WebGLRenderer({
-        canvas: document.getElementById("three-canvas"),
-        alpha: true,
-      });
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.setPixelRatio(window.devicePixelRatio);
-
-      const light = new THREE.HemisphereLight(0xffffff, 0x000000, 1);
-      scene.add(light);
-
-      const loader = new GLTFLoader();
-      loader.load("assets/models/gaming_bedroom.glb", (gltf) => {
-        const model = gltf.scene;
-        model.scale.set(1.2, 1.2, 1.2);
-        scene.add(model);
-        animate();
-      });
-
-      camera.position.z = 3;
-
-      const controls = new OrbitControls(camera, renderer.domElement);
-      controls.enableDamping = true;
-
-      function animate() {
-        requestAnimationFrame(animate);
-        controls.update();
-        renderer.render(scene, camera);
-      }
-
-      window.addEventListener("resize", () => {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-      });
-    </script>
     <!-- === BLOG SECTION === -->
-
     <section class="blog-section">
       <div class="background-video">
         <video autoplay muted loop playsinline poster="fallback.jpg">
@@ -183,22 +138,85 @@
       </div>
     </section>
 
-    <script>
-      document
-        .getElementById("menuToggle")
-        .addEventListener("click", function () {
-          document.getElementById("navLinks").classList.toggle("show");
-        });
-    </script>
-
     <!-- AOS Library JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-      AOS.init({
-        duration: 1000,
-        once: true,
+      AOS.init({ duration: 1000, once: true });
+    </script>
+
+    <!-- Defer 3D Script -->
+    <script type="module">
+      window.requestIdleCallback(() => {
+        import(
+          "https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js"
+        ).then((THREE) => {
+          Promise.all([
+            import(
+              "https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/loaders/GLTFLoader.js"
+            ),
+            import(
+              "https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/controls/OrbitControls.js"
+            ),
+          ]).then(([{ GLTFLoader }, { OrbitControls }]) => {
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(
+              75,
+              window.innerWidth / window.innerHeight,
+              0.1,
+              1000
+            );
+            const renderer = new THREE.WebGLRenderer({
+              canvas: document.getElementById("three-canvas"),
+              alpha: true,
+            });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+
+            const light = new THREE.HemisphereLight(0xffffff, 0x000000, 1);
+            scene.add(light);
+
+            const loader = new GLTFLoader();
+            loader.load("assets/models/gaming_bedroom.glb", (gltf) => {
+              const model = gltf.scene;
+              model.scale.set(1.2, 1.2, 1.2);
+              scene.add(model);
+              animate();
+            });
+
+            camera.position.z = 3;
+            const controls = new OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+
+            function animate() {
+              requestAnimationFrame(animate);
+              controls.update();
+              renderer.render(scene, camera);
+            }
+
+            window.addEventListener("resize", () => {
+              camera.aspect = window.innerWidth / window.innerHeight;
+              camera.updateProjectionMatrix();
+              renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+          });
+        });
       });
     </script>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const vid = document.getElementById("hero-video");
+        vid.setAttribute("autoplay", true);
+        vid.load();
+      });
+    </script>
+
+    <script>
+      document.getElementById("menuToggle").addEventListener("click", () => {
+        document.querySelector(".nav-center").classList.toggle("show");
+      });
+    </script>
+
     <script src="script.js"></script>
   </body>
 </html>
