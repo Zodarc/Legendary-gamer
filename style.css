@@ -411,15 +411,7 @@ ul {
     max-height: 300px;
   }
 
-  .gear-assembly {
-  width: 100%;
-  height: auto;
-  background-color: #0a0a0a;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-}
-
+ 
 
   /* === BLOG CARDS === */
   .blog-section .cards {
@@ -739,4 +731,19 @@ ul {
   0% { left: -100%; }
   50% { left: 100%; }
   100% { left: -100%; }
+}
+
+#gear-assemble {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+  z-index: 0;
+}
+
+#three-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
