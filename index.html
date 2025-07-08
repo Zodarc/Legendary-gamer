@@ -105,51 +105,30 @@
       </div>
     </section>
 
-    <!-- === BLOG SECTION === -->
-    <section class="blog-section">
-      <div class="background-video">
-        <video autoplay muted loop playsinline poster="fallback.jpg">
-          <source src="rgb-blur-bg.mp4" type="video/mp4" />
-          <img src="hero-bg.jpg" alt="Background Video Fallback" />
-        </video>
+    <!-- === CATEGORY MENU STRIP === -->
+    <section class="category-menu">
+      <div class="category-container">
+        <a href="#chairs">Chairs</a>
+        <a href="#monitors">Monitors</a>
+        <a href="#pcs">PCs</a>
+        <a href="#keyboards">Keyboards</a>
+        <a href="#headsets">Headsets</a>
       </div>
+    </section>
 
-      <div class="blog-header">
-        <h2>Legendary Gamer Blog</h2>
-        <a href="#" class="view-all">View Blog</a>
-      </div>
-
-      <div class="blog-cards">
-        <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
-          <img src="blog1.jpg" alt="Blog 1" />
-          <div class="blog-content">
-            <h3>Top Gaming Gear This Season</h3>
-            <p>
-              Discover the top-rated accessories you need to upgrade your rig.
-            </p>
-            <span class="tag">News</span>
-          </div>
-        </div>
-
-        <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
-          <img src="blog2.jpg" alt="Blog 2" />
-          <div class="blog-content">
-            <h3>Wukong Release Preview</h3>
-            <p>
-              We dive into gameplay, graphics and what makes it a must-play.
-            </p>
-            <span class="tag">Preview</span>
-          </div>
-        </div>
-
-        <div class="blog-card" data-aos="fade-up" data-aos-delay="300">
-          <img src="blog3.jpg" alt="Blog 3" />
-          <div class="blog-content">
-            <h3>Beginner's Gear Loadout</h3>
-            <p>Just starting out? Here's the ultimate starter pack setup.</p>
-            <span class="tag">Tips</span>
-          </div>
-        </div>
+    <section class="gear-slider-section">
+      <div class="gear-slider-track">
+        <img src="images/chair.png" alt="Gaming Chair" />
+        <img src="images/monitor.png" alt="Gaming Monitor" />
+        <img src="images/pc.png" alt="Gaming PC" />
+        <img src="images/keyboard.png" alt="Gaming Keyboard" />
+        <img src="images/headset.png" alt="Gaming Headset" />
+        <!-- Duplicate for seamless loop -->
+        <img src="images/chair.png" alt="Gaming Chair" />
+        <img src="images/monitor.png" alt="Gaming Monitor" />
+        <img src="images/pc.png" alt="Gaming PC" />
+        <img src="images/keyboard.png" alt="Gaming Keyboard" />
+        <img src="images/headset.png" alt="Gaming Headset" />
       </div>
     </section>
 
@@ -157,65 +136,6 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
       AOS.init({ duration: 1000, once: true });
-    </script>
-
-    <!-- Defer 3D Script -->
-    <script type="module">
-      window.requestIdleCallback(() => {
-        import(
-          "https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js"
-        ).then((THREE) => {
-          Promise.all([
-            import(
-              "https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/loaders/GLTFLoader.js"
-            ),
-            import(
-              "https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/controls/OrbitControls.js"
-            ),
-          ]).then(([{ GLTFLoader }, { OrbitControls }]) => {
-            const scene = new THREE.Scene();
-            const camera = new THREE.PerspectiveCamera(
-              75,
-              window.innerWidth / window.innerHeight,
-              0.1,
-              1000
-            );
-            const renderer = new THREE.WebGLRenderer({
-              canvas: document.getElementById("three-canvas"),
-              alpha: true,
-            });
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            renderer.setPixelRatio(window.devicePixelRatio);
-
-            const light = new THREE.HemisphereLight(0xffffff, 0x000000, 1);
-            scene.add(light);
-
-            const loader = new GLTFLoader();
-            loader.load("assets/models/gaming_bedroom.glb", (gltf) => {
-              const model = gltf.scene;
-              model.scale.set(1.2, 1.2, 1.2);
-              scene.add(model);
-              animate();
-            });
-
-            camera.position.z = 3;
-            const controls = new OrbitControls(camera, renderer.domElement);
-            controls.enableDamping = true;
-
-            function animate() {
-              requestAnimationFrame(animate);
-              controls.update();
-              renderer.render(scene, camera);
-            }
-
-            window.addEventListener("resize", () => {
-              camera.aspect = window.innerWidth / window.innerHeight;
-              camera.updateProjectionMatrix();
-              renderer.setSize(window.innerWidth, window.innerHeight);
-            });
-          });
-        });
-      });
     </script>
 
     <script>
