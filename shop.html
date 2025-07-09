@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legendary Gamer - Gear Shop</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Titillium+Web:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="shop-page">
+    <!-- === TOP BAR === -->
+    <div class="top-bar animate-top-bar">
+      <span class="top-message"
+        >🔥 Gear up with Legendary Loadouts — Weekly Drops Now Live!</span
+      >
+      <a href="#" class="top-cta">Subscribe</a>
+    </div>
+
+    <!-- === NAVIGATION BAR === -->
+    <header class="navbar-glass bordered-nav animate-fade-in">
+      <div class="nav-left">
+        <img src="logo.ico" alt="Legendary Gamer Logo" class="logo-icon" />
+        <span class="brand-name">LEGENDARY GAMER</span>
+      </div>
+      <nav class="nav-center">
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="shop.html">Gear</a>
+        <a href="courses.html">Courses</a>
+        <a href="tv.html">TV</a>
+      </nav>
+      <div class="nav-right">
+        <select class="lang-select">
+          <option>EN</option>
+          <option>FR</option>
+        </select>
+        <a href="#" class="btn-login">Log in</a>
+        <a href="#" class="btn-signup">Sign up</a>
+        <button id="menuToggle" class="hamburger">☰</button>
+      </div>
+    </header>
+
+    <!-- === HERO SECTION === -->
+    <section class="shop-hero">
+      <div class="shop-hero-bg">
+        <img src="heropad.jpg" alt="Gaming Gear Banner" />
+        <div class="shop-hero-overlay">
+          <h1 class="shop-title">SHOP</h1>
+          <p class="breadcrumb">Home / Shop</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- === SHOP LAYOUT === -->
+    <section class="shop-layout">
+      <aside class="shop-sidebar">
+        <h3>Product Categories</h3>
+        <ul>
+          <li><a href="#">Gaming Chairs</a></li>
+          <li><a href="#">Monitors</a></li>
+          <li><a href="#">Custom PCs</a></li>
+          <li><a href="#">Keyboards</a></li>
+          <li><a href="#">Headsets</a></li>
+        </ul>
+        <h3>Pricing</h3>
+        <input type="range" min="100" max="5000" />
+        <h3>Brands</h3>
+        <ul>
+          <li>Razer</li>
+          <li>Logitech</li>
+          <li>SteelSeries</li>
+          <li>Alienware</li>
+        </ul>
+      </aside>
+
+      <main class="shop-main">
+        <div class="shop-toolbar">
+          <span>Showing 1-9 of 27 items</span>
+          <div>
+            <label>Sort By:</label>
+            <select>
+              <option>Default</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+            </select>
+          </div>
+          <div>
+            <label>Show:</label>
+            <select>
+              <option>9</option>
+              <option>18</option>
+              <option>27</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="images/chair.png" alt="Chair" class="product-img" />
+            <h4>Legendary Chair</h4>
+            <p>$199.00</p>
+          </div>
+          <div class="product-card">
+            <img src="images/monitor.png" alt="Monitor" class="product-img" />
+            <h4>4K Gaming Monitor</h4>
+            <p>$299.00</p>
+          </div>
+          <div class="product-card">
+            <img src="images/pc.png" alt="Gaming PC" class="product-img" />
+            <h4>Beast PC</h4>
+            <p>$1,499.00</p>
+          </div>
+          <div class="product-card">
+            <img src="images/keyboard.png" alt="Keyboard" class="product-img" />
+            <h4>RGB Mechanical Keyboard</h4>
+            <p>$129.00</p>
+          </div>
+          <div class="product-card">
+            <img src="images/headset.png" alt="Headset" class="product-img" />
+            <h4>Surround Sound Headset</h4>
+            <p>$89.00</p>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <!-- === PRODUCT DETAIL MODAL === -->
+    <div id="product-detail-modal" class="product-modal hidden">
+      <div class="product-modal-content">
+        <span class="close-btn" onclick="closeModal()">×</span>
+        <div class="modal-image">
+          <img id="modal-img" src="" alt="Product" />
+        </div>
+        <div class="modal-details">
+          <h2 id="modal-title">Product Name</h2>
+          <p id="modal-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Premium
+            quality for elite gamers.
+          </p>
+          <p id="modal-price">$199.00</p>
+          <button class="cta-btn">Add to Loadout</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- === FOOTER === -->
+    <footer class="footer">
+      <p>&copy; 2025 Legendary Gamer. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document.getElementById("menuToggle").addEventListener("click", () => {
+        document.querySelector(".nav-center").classList.toggle("show");
+      });
+    </script>
+
+    <script>
+      const modal = document.getElementById("product-detail-modal");
+      const modalImg = document.getElementById("modal-img");
+      const modalTitle = document.getElementById("modal-title");
+      const modalDesc = document.getElementById("modal-desc");
+      const modalPrice = document.getElementById("modal-price");
+
+      document.querySelectorAll(".product-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          modalImg.src = card.querySelector("img").src;
+          modalTitle.textContent = card.querySelector("h4").textContent;
+          modalPrice.textContent = card.querySelector("p").textContent;
+          modalDesc.textContent =
+            "Custom tuned for peak performance. Perfect for pro gamers and casual heroes alike."; // Optional dynamic content
+          modal.classList.remove("hidden");
+        });
+      });
+
+      function closeModal() {
+        modal.classList.add("hidden");
+      }
+    </script>
+  </body>
+</html>

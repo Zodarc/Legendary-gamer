@@ -563,7 +563,7 @@ ul {
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: pink;
+  background: linear-gradient(180deg, #0e0e10, #1a092a);
   padding: 3rem 0;
   z-index: 2;
 }
@@ -640,4 +640,335 @@ ul {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+
+
+
+/* === GENERAL RESETS === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f6f7fb;
+  color: #222;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* === TOP BAR === */
+.shop-page .top-bar {
+  background: #eaf0ff;
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-cta {
+  color: #0056d2;
+  font-weight: 600;
+}
+
+/* === NAVIGATION === */
+/* Only apply light navbar styles on the shop page */
+.shop-page .navbar-glass {
+  background: #fdfdfd;
+  color: #111;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #ddd;
+}
+
+.shop-page .navbar-glass a {
+  color: #111;
+}
+
+.shop-page .btn-login,
+.shop-page .btn-signup {
+  background: #111;
+  color: #fff;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+.logo-icon {
+  width: 32px;
+  margin-right: 0.5rem;
+}
+.brand-name {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.nav-center a {
+  margin: 0 1rem;
+  font-weight: 500;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+.btn-login, .btn-signup {
+  margin-left: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+.btn-login {
+  background: transparent;
+  border: 1px solid #bbb;
+  color: #333;
+}
+.btn-signup {
+  background: #0056d2;
+  color: #fff;
+  border: none;
+}
+.lang-select {
+  padding: 0.2rem;
+  margin-right: 1rem;
+}
+.hamburger {
+  display: none;
+}
+
+/* === HERO === */
+.shop-hero {
+  margin-top: 102px; /* adjust depending on the height of your top bar + navbar */
+}
+
+.shop-hero-bg {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.shop-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.shop-hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+.shop-title {
+  font-size: 2.5rem;
+  font-family: 'Titillium Web', sans-serif;
+  margin-bottom: 0.5rem;
+}
+.breadcrumb {
+  font-size: 0.9rem;
+}
+
+/* === SHOP LAYOUT === */
+.shop-layout {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 5%;
+}
+
+/* === SIDEBAR === */
+.shop-sidebar {
+  flex: 1;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+.shop-sidebar h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.3rem;
+}
+.shop-sidebar ul {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+.shop-sidebar ul li {
+  padding: 0.3rem 0;
+  color: #333;
+}
+.shop-sidebar input[type="range"] {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+/* === MAIN SECTION === */
+.shop-main {
+  flex: 3;
+}
+.shop-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+.shop-toolbar select {
+  padding: 0.3rem;
+  margin-left: 0.5rem;
+}
+
+/* === PRODUCT GRID === */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+.product-card h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.product-card p {
+  font-weight: bold;
+  color: #0056d2;
+}
+
+/* === FOOTER === */
+.footer {
+  background: #f1f1f1;
+  padding: 1rem 5%;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 3rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .shop-layout {
+    flex-direction: column;
+  }
+  .nav-center {
+    display: none;
+  }
+  .nav-center.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    padding: 1rem;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.08);
+  }
+  .hamburger {
+    display: block;
+    background: none;
+    font-size: 1.5rem;
+    border: none;
+  }
+}
+   
+
+
+.product-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.product-modal.hidden {
+  display: none;
+}
+
+.product-modal-content {
+  display: flex;
+  gap: 2rem;
+  background: #f7f7f9;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-image img {
+  max-width: 300px;
+  border-radius: 12px;
+}
+
+.modal-details h2 {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-details p {
+  margin-bottom: 1rem;
+}
+
+.modal-details .cta-btn {
+  background: #111;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal-details .cta-btn:hover {
+  background: #222;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #444;
+}
+
+@keyframes fadeIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
